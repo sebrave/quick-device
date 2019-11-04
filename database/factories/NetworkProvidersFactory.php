@@ -2,11 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\NetworkProvider;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(NetworkProvider::class, function (Faker $faker) {
     return [
-        //
+        'name' => $faker->company
     ];
 });
