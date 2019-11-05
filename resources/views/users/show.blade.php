@@ -2,6 +2,9 @@
 
 @section ('content')
 
+<h4>{{ $user->name }}'s Devices</h4>
+<br/>
+
 <table class="table table-striped">
     <thead>
         <tr>
