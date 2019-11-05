@@ -14,7 +14,9 @@ class SimCardsController extends Controller
      */
     public function index()
     {
-        return SimCard::latest()->get();
+        return SimCard::latest()
+            ->with('networkprovider')
+            ->get();
     }
 
     /**
@@ -34,12 +36,14 @@ class SimCardsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  SimCard  $simcard
+     * @param  Id  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(SimCard $simcard)
+    public function show($id)
     {
-        return $simcard;
+        return SimCard::find($id)
+            ->with('networkprovider')
+            ->firstOrFail();
     }
 
     /**

@@ -14,7 +14,9 @@ class PhoneNumbersController extends Controller
      */
     public function index()
     {
-        return PhoneNumber::latest()->get();
+        return PhoneNumber::latest()
+            ->with('networkprovider')
+            ->get();
     }
 
     /**
@@ -34,12 +36,14 @@ class PhoneNumbersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  PhoneNumber $phonenumber
+     * @param  Id $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PhoneNumber $phonenumber)
+    public function show($id)
     {
-        return $phonenumber;
+        return PhoneNumber::find($id)
+            ->with('networkprovider')
+            ->firstOrFail();
     }
 
     /**
