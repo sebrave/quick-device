@@ -17,6 +17,7 @@ class CreateDeviceSimCardTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('device_id');
             $table->unsignedBigInteger('sim_card_id');
+            $table->boolean('active')->default(false);
             $table->timestamps();
 
             $table->unique(['device_id', 'sim_card_id']);

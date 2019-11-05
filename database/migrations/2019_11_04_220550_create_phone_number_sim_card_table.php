@@ -17,6 +17,7 @@ class CreatePhoneNumberSimCardTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('phone_number_id');
             $table->unsignedBigInteger('sim_card_id');
+            $table->boolean('active')->default(false);
             $table->timestamps();
 
             $table->unique(['phone_number_id', 'sim_card_id']);

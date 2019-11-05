@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDeviceUserTable extends Migration
+class CreateDeviceUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateDeviceUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('device_user', function (Blueprint $table) {
+        Schema::create('device_users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('device_id');
             $table->unsignedBigInteger('user_id');
+            $table->timestamp('unassigned_at')->nullable()->default(null);
             $table->timestamps();
-
-            $table->unique(['device_id', 'user_id']);
 
             $table->foreign('device_id')
                 ->references('id')

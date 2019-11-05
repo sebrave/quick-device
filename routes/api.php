@@ -14,8 +14,9 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware([])->group(function () {
-    Route::resource('simcard', 'SimCardsController');
-    Route::resource('device', 'DevicesController');
-    Route::resource('phonenumber', 'PhoneNumbersController');
-    Route::resource('networkprovider', 'NetworkProvidersController');
+    Route::resource('/simcard', 'v1\SimCardsController');
+    Route::resource('/device', 'v1\DevicesController');
+    Route::resource('/phonenumber', 'v1\PhoneNumbersController');
+    Route::resource('/networkprovider', 'v1\NetworkProvidersController');
+    Route::resource('/user', 'v1\UsersController');
 });
