@@ -14,11 +14,11 @@
     		<div class="d-flex justify-content-around" style="padding-top:20px;">
                 <h2 style="color:#eeffff;">Quick Device</h1>
             </div>
-    		<div width="100%" style="padding:20px;" class="d-flex">
-                <h4><a href="/" style="color:#ddeeff !important; padding:10px;">Users</a></h4>
-                <h4><a href="/device" style="color:#ddeeff !important; padding:10px;">Devices</a></h4>
-                <h4><a href="/simcard" style="color:#ddeeff !important; padding:10px;">SIM Cards</a></h4>
-                <h4><a href="/phonenumber" style="color:#ddeeff !important; padding:10px;">Phone Numbers</a></h4>
+    		<div width="100%" style="padding:20px;" class="d-flex" id="header-links">
+                <h4><a href="/">Users</a></h4>
+                <h4><a href="/device">Devices</a></h4>
+                <h4><a href="/simcard">SIM Cards</a></h4>
+                <h4><a href="/phonenumber">Phone Numbers</a></h4>
     		</div>
     	</div>
 
