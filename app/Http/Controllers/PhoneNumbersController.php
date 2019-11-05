@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\PhoneNumber;
 
 class PhoneNumbersController extends Controller
 {
@@ -13,7 +14,7 @@ class PhoneNumbersController extends Controller
      */
     public function index()
     {
-        //
+        return PhoneNumber::latest()->get();
     }
 
     /**
@@ -24,40 +25,55 @@ class PhoneNumbersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $phonenumber = PhoneNumber::create(
+            $this->validateDevice()
+        );
+        return $phonenumber;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  PhoneNumber $phonenumber
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(PhoneNumber $phonenumber)
     {
-        //
+        return $phonenumber;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  PhoneNumber $phonenumber
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, PhoneNumber $phonenumber)
     {
-        //
+        $phonenumber->update(
+            $this->validatePhoneNumber()
+        );
+
+        return $phonenumber;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  PhoneNumber  $phonenumber
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(PhoneNumber $phonenumber)
     {
-        //
+        $phonenumber->delete();
+    }
+
+    protected function validatePhoneNumber()
+    {
+        return request()->validate([
+            'phone_number' => 'required|min:11|max:11',
+            'network_provider_id' => 'required'
+        ]);
     }
 }

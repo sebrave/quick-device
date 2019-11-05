@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware([])->group(function () {
+    Route::resource('simcard', 'SimCardsController');
+    Route::resource('device', 'DevicesController');
+    Route::resource('phonenumber', 'PhoneNumbersController');
+    Route::resource('networkprovider', 'NetworkProvidersController');
 });

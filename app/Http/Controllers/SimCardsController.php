@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\SimCard;
 
 class SimCardsController extends Controller
 {
@@ -13,7 +14,7 @@ class SimCardsController extends Controller
      */
     public function index()
     {
-        //
+        return SimCard::latest()->get();
     }
 
     /**
@@ -24,40 +25,55 @@ class SimCardsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $simcard = SimCard::create(
+            $this->validateDevice()
+        );
+        return $simcard;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  SimCard  $simcard
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(SimCard $simcard)
     {
-        //
+        return $simcard;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  SimCard  $simcard
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, SimCard $simcard)
     {
-        //
+        $simcard->update(
+            $this->validateSimCard()
+        );
+
+        return $simcard;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  SimCard  $simcard
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(SimCard $simcard)
     {
-        //
+        $simcard->delete();
+    }
+
+    protected function validateSimCard()
+    {
+        return request()->validate([
+            'sim_number' => 'required',
+            'network_provider_id' => 'required'
+        ]);
     }
 }

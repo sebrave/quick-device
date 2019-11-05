@@ -19,7 +19,7 @@ $factory->define(Device::class, function (Faker $faker) {
     return [
         'type' => $device['type'],
         'serial_number' => mt_rand(10000,99999) . '-' . mt_rand(10000,99999),
-        'imei_number' => mt_rand(10000000,99999999),
+        'imei_number' => mt_rand(100000000000000,999999999999999),
         'manufacturer' => $device['manufacturer'],
         'model' => $device['model'],
         'operating_system' => $device['operating_system']

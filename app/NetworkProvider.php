@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class NetworkProvider extends Model
 {
-    //
+    protected $fillable = ['name'];
 }

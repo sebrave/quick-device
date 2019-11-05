@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\NetworkProvider;
 
 class NetworkProvidersController extends Controller
 {
@@ -13,7 +14,7 @@ class NetworkProvidersController extends Controller
      */
     public function index()
     {
-        //
+        return NetworkProvider::latest()->get();
     }
 
     /**
@@ -24,40 +25,55 @@ class NetworkProvidersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $networkprovider = NetworkProvider::create(
+            $this->validateNetworkProvider()
+        );
+        return $networkprovider;
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resou$networkProviderrce.
      *
-     * @param  int  $id
+     * @param  NetworkProvider  $networkProvider
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(NetworkProvider $networkprovider)
     {
-        //
+        return $networkprovider;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  NetworkProvider  $networkprovider
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, NetworkProvider $networkprovider)
     {
-        //
+        $networkprovider->update(
+            $this->validateNetworkProvider()
+        );
+
+        return $networkprovider;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  NetworkProvider  $networkprovider
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(NetworkProvider $networkprovider)
     {
-        //
+        $networkprovider->delete();
     }
+
+    protected function validateNetworkProvider()
+    {
+        return request()->validate([
+            'name' => 'required'
+        ]);
+    }
+
 }
