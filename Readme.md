@@ -14,4 +14,6 @@ valet start
 
 Update the .env config file to point at your local Database
 
-php artisan migrate
+php artisan migrate:fresh
+
+php artisan db:seed
