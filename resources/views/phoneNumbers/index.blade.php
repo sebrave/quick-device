@@ -2,6 +2,8 @@
 
 @section ('content')
 
+{{ $phoneNumbers->links() }}
+
 <table class="table table-striped">
     <thead>
         <tr>

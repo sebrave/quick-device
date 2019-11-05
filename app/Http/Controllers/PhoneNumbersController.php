@@ -18,7 +18,8 @@ class PhoneNumbersController extends Controller
      */
     public function index()
     {
-        $phoneNumbers = PhoneNumber::latest()->get();
+        $phoneNumbers = PhoneNumber::latest()
+            ->paginate(15);
 
         return view('phoneNumbers.index', [
             'phoneNumbers' => $phoneNumbers

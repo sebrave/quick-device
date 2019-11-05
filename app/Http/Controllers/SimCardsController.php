@@ -18,7 +18,9 @@ class SimCardsController extends Controller
      */
     public function index()
     {
-        $simCards = SimCard::latest()->with('networkProvider')->get();
+        $simCards = SimCard::latest()
+        ->with('networkProvider')
+        ->paginate(15);
 
         return view('simCards.index', [
             'simCards' => $simCards

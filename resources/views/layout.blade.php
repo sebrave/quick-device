@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Quick Device</title>
     <link href="/css/app.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 @yield ('head')
 
 </head>
@@ -19,7 +18,7 @@
                 <h4><a href="/device">Devices</a></h4>
                 <h4><a href="/simcard">SIM Cards</a></h4>
                 <h4><a href="/phonenumber">Phone Numbers</a></h4>
-                <h4><a href="/docs/index.html">API</a></h4>
+                <h4><a href="/docs/index.html" target="_blank">API</a></h4>
     		</div>
     	</div>
 

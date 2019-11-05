@@ -18,7 +18,8 @@ class DevicesController extends Controller
      */
     public function index()
     {
-        $devices = Device::latest()->get();
+        $devices = Device::latest()
+            ->paginate(15);
 
         return view('devices.index', [
             'devices' => $devices
