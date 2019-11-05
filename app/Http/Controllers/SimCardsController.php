@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\SimCard;
 
+/**
+ * Class SimCardsController
+ * @package App\Http\Controllers
+ */
 class SimCardsController extends Controller
 {
     /**

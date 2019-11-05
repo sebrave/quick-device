@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\SimCard;
 
+/**
+ * @group Sim card management
+ * Class SimCardsController
+ * @package App\Http\Controllers\v1
+ */
 class SimCardsController extends Controller
 {
     /**
+     * @group Sim card management
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -21,6 +27,7 @@ class SimCardsController extends Controller
     }
 
     /**
+     * @group Sim card management
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,6 +42,7 @@ class SimCardsController extends Controller
     }
 
     /**
+     * @group Sim card management
      * Display the specified resource.
      *
      * @param  Id  $id
@@ -48,6 +56,7 @@ class SimCardsController extends Controller
     }
 
     /**
+     * @group Sim card management
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -64,6 +73,7 @@ class SimCardsController extends Controller
     }
 
     /**
+     * @group Sim card management
      * Remove the specified resource from storage.
      *
      * @param  SimCard  $simcard

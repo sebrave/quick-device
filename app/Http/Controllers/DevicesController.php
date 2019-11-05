@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Device;
 
+/**
+ * Class DevicesController
+ * @package App\Http\Controllers
+ */
 class DevicesController extends Controller
 {
     /**

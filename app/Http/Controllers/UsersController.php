@@ -7,6 +7,10 @@ use App\Device;
 use App\DeviceUser;
 use App\User;
 
+/**
+ * Class UsersController
+ * @package App\Http\Controllers
+ */
 class UsersController extends Controller
 {
     /**

@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\NetworkProvider;
 
+/**
+ * @group Network provider management
+ * Class NetworkProvidersController
+ * @package App\Http\Controllers\v1
+ */
 class NetworkProvidersController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @group Network provider management
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,6 +26,7 @@ class NetworkProvidersController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @group Network provider management
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -34,6 +41,7 @@ class NetworkProvidersController extends Controller
 
     /**
      * Display the specified resou$networkProviderrce.
+     * @group Network provider management
      *
      * @param  NetworkProvider  $networkProvider
      * @return \Illuminate\Http\Response
@@ -45,6 +53,7 @@ class NetworkProvidersController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * @group Network provider management
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  NetworkProvider  $networkprovider
@@ -61,6 +70,7 @@ class NetworkProvidersController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * @group Network provider management
      *
      * @param  NetworkProvider  $networkprovider
      * @return \Illuminate\Http\Response

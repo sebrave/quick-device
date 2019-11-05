@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Device;
 
+/**
+ * @group Device management
+ * Class DevicesController
+ * @package App\Http\Controllers\v1
+ */
 class DevicesController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @group Device management
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,6 +26,7 @@ class DevicesController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @group Device management
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -34,6 +41,7 @@ class DevicesController extends Controller
 
     /**
      * Display the specified resource.
+     * @group Device management
      *
      * @param  Device  $device
      * @return \Illuminate\Http\Response
@@ -45,6 +53,7 @@ class DevicesController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * @group Device management
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  Device $device
@@ -61,6 +70,7 @@ class DevicesController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * @group Device management
      *
      * @param  Device $device
      * @return \Illuminate\Http\Response

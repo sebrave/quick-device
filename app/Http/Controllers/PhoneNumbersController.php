@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\PhoneNumber;
 
+/**
+ * Class PhoneNumbersController
+ * @package App\Http\Controllers
+ */
 class PhoneNumbersController extends Controller
 {
     /**

@@ -19,6 +19,7 @@
                 <h4><a href="/device">Devices</a></h4>
                 <h4><a href="/simcard">SIM Cards</a></h4>
                 <h4><a href="/phonenumber">Phone Numbers</a></h4>
+                <h4><a href="/docs/index.html">API</a></h4>
     		</div>
     	</div>
 

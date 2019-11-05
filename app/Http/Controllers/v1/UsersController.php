@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 
+/**
+ * @group User management
+ * Class UsersController
+ * @package App\Http\Controllers\v1
+ */
 class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @group User management
      *
      * @return \Illuminate\Http\Response
      */
@@ -21,6 +27,7 @@ class UsersController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @group User management
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -35,6 +42,7 @@ class UsersController extends Controller
 
     /**
      * Display the specified resource.
+     * @group User management
      *
      * @param  User  $user
      * @return \Illuminate\Http\Response
@@ -46,6 +54,7 @@ class UsersController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * @group User management
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  User  $user
@@ -62,6 +71,7 @@ class UsersController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * @group User management
      *
      * @param  User  $user
      * @return \Illuminate\Http\Response

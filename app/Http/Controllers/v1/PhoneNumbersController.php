@@ -6,10 +6,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\PhoneNumber;
 
+/**
+ * @group Phone number management
+ * Class PhoneNumbersController
+ * @package App\Http\Controllers\v1
+ */
 class PhoneNumbersController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * @group Phone number management
      *
      * @return \Illuminate\Http\Response
      */
@@ -22,6 +28,7 @@ class PhoneNumbersController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     * @group Phone number management
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -36,6 +43,7 @@ class PhoneNumbersController extends Controller
 
     /**
      * Display the specified resource.
+     * @group Phone number management
      *
      * @param  Id $id
      * @return \Illuminate\Http\Response
@@ -49,6 +57,7 @@ class PhoneNumbersController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * @group Phone number management
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  PhoneNumber $phonenumber
@@ -65,6 +74,7 @@ class PhoneNumbersController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * @group Phone number management
      *
      * @param  PhoneNumber  $phonenumber
      * @return \Illuminate\Http\Response
